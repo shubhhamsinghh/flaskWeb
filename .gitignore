@@ -7,7 +7,7 @@ __pycache__/
 flaskWebEnv/
 
 # Environment variables file
-.env
+
 
 # IDE configuration files
 .vscode/
