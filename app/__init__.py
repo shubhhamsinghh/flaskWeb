@@ -1,5 +1,6 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 #create DB object globally
 db = SQLAlchemy()
 
@@ -18,4 +19,13 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(tasks_bp)
 
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return redirect(url_for('auth.login'))
+
+    @app.context_processor
+    def current_year():
+        return {'current_year': datetime.now().year}
+
     return app
+

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, redirect, request, url_for, flash, session
+from app.middleware import auth, guest
 
 auth_bp = Blueprint('auth',__name__)
 
@@ -8,6 +9,7 @@ USER_CREDENTIALS = {
 }
 
 @auth_bp.route('/login', methods=["GET","POST"])
+@guest
 def login():
     if request.method == "POST":
         username = request.form.get('username')
@@ -23,7 +25,8 @@ def login():
 
 
 @auth_bp.route('/logout')
+@auth
 def logout():
     session.pop('user', None)
     flash('User Logout Successfully','info')
-    return redirect(url_for('login'))
+    return redirect(url_for('auth.login'))
