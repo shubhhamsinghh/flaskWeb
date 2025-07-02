@@ -12,7 +12,7 @@ body{
 /*header*/
 
 header{
-    background: linear-gradient(to_right, #0062E6, #33AeFF);
+    background: linear-gradient(to right, #0062E6, #33AeFF);
     color: white;
     padding: 20px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -26,6 +26,11 @@ header h1{
 }
 
 nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a{
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -58,3 +63,147 @@ footer p {
 .flash.info{color: blue;}
 
 /* login form */
+.login-box{
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+
+.btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #0056b3;
+}
+
+.task-box{
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.task-form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.task-form input[type="text"]{
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-form .btn{
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.task-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td{
+    text-align: left;
+    padding: 12px;
+    border-radius: 1px solid #ccc;
+}
+
+.task-table th{
+    background-color: #f2f2f2;
+}
+
+.btn-delete{
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-delete:hover{
+    background-color: #c82333;
+}
+
+.badge{
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.padding{
+    background-color: #ffc107;
+}
+
+.badge.working{
+    background-color: #17a2b8;
+}
+
+.badge.done{
+    background-color: #28a745;
+}
+
+.btn-small{
+    font-size: 12px;
+    padding: 6px 12px;
+    border: none;
+    background-color: #6c767d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-small:hover{
+    background-color: #495057;
+}
+
+.btn-clear{
+    background-color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.btn-clear:hover{
+    background-color: #c82333;
+}

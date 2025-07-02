@@ -11,7 +11,7 @@
         <div class="container">
             <h1>My To-Do App</h1>
             <nav>
-                 <a href="{{url_for('tasks.view_task')}}">Home</a>
+                 <a href="{{url_for('tasks.view_tasks')}}">Home</a>
                 {% if 'user' in session %}
                 <a href="{{url_for('auth.logout')}}">Logout</a>
                 {% else %}
@@ -22,7 +22,8 @@
     </header>
 
     <main class="container">
-        {% with messages = get_flashed_message(with_categories=True) %}
+        
+        {% with messages = get_flashed_messages(with_categories=True) %}
             {% for category, message in messages %}
             <div class="flash {{category}}">{{message}}</div>
             {% endfor %}
@@ -32,7 +33,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; {{now('Y')}} My Flask To-Do App</p>
+            <p>&copy; 2025 My Flask To-Do App</p>
         </div>
     </footer>
 </body>
