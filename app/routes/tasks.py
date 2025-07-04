@@ -6,7 +6,7 @@ from app.middleware import auth
 tasks_bp = Blueprint('tasks', __name__)
 
 @tasks_bp.route('/')
-
+@auth
 def view_tasks():
     tasks = Task.query.all()
     return render_template('tasks.html',tasks=tasks)
